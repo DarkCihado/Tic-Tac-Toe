@@ -1,12 +1,54 @@
-table {
-    border-collapse: collapse;
+/* Ändern der Hintergrundfarbe der Seite */
+body {
+    background-color: #323232;                              /* die hintergrund farbe wurde richtig geändert*/
+    font-family: 'Open Sans', sans-serif;   
+    margin: 0;                  /* die schriftart wurde richtig geändert*/
+}
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+h1 {
+    color: white;
+    font-size: 80px;
+    text-align: center;
 }
 
- td {
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    font-size: 36px;
-    font-weight: bold;
+/* Anpassen des Stylings der Tabelle */
+table {                                                       /* hier gehts um die tabelle im allgemeinen */                
+    border-collapse: collapse;                                /* wieder collapse damit es keine doppelten ränder und trennlinien gibt*/
+    width: 300px;                                             /* breite von 300px */
+    height: 300px;                                            /* höhe von 300px */
+    margin: 20px auto;                                        /* zentrierung der tabelle auf der seite */
+}
+td {                                                          /* hier gehts um die tabellenelemente also td (table data)*/
+    border: 5px solid white;                                /* weiße trennlinie die 5px breit ist also richtig*/
+    width: 100px;                                             /* die tabellenelemente sind 100px breit */
+    height: 100px;                                            /* die tabellenelemente sind 100px hoch */
+    text-align: center;                                       /* zentrierung von x und o wenn wir es reinschreiben würden */
+    font-size: 64px;                                          /* 36px größe als schriftgröße */
+    color: white;                                           /* Weiße Schriftfarbe */      
+}
+
+td:hover {
+    background-color: rgba(255,255,255,0.3);
+    cursor: pointer;
+}
+
+tr:first-child td {
+    border-top: none;                                         /* Entfernen der oberen Border für die erste Zeile */
+}
+
+tr:last-child td {
+    border-bottom: none;                                       /* Entfernen der unteren Border für die letzte Zeile */
+}
+
+td:first-child {
+    border-left: none;                                          /* Entfernen der linken Border für die erste Spalte */
+}
+
+td:last-child {
+    border-right: none;                                         /* Entfernen der rechten Border für die letzte Spalte */
 }
